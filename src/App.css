@@ -14,13 +14,13 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  background: #eee;
 }
 .App-forecast > li{
   box-sizing: border-box;
   width: 12.5%;
   list-style: none;
   padding: 20px 8px;
-  background: #eee;
 }
 .App-forecast .date {
   font-weight: 700;
