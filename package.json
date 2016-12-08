@@ -10,6 +10,7 @@
     "react-dom": "^15.4.1",
     "whatwg-fetch": "^2.0.1"
   },
+  "homepage": "http://www.codeworkshop.co.uk/samples/react-weather/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
