@@ -1,6 +1,6 @@
 # react-weather-forecast
 
-Hosting url: https://react-weather-widget-a7086.firebaseapp.com/
+Hosting url: http://www.codeworkshop.co.uk/samples/react-weather/
 
 Repo: https://github.com/danb-cws/react-weather-forecast
 
@@ -20,3 +20,4 @@ Repo: https://github.com/danb-cws/react-weather-forecast
 ### Problems with the implementation
 * API key is unprotected - better to have a service (eg node) that makes the api call and only accepts a whitelist of domains
 * no server rendering
+* its ugly!
