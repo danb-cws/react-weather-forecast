@@ -7,6 +7,14 @@ class Weather extends Component {
 
   weatherList = [];
 
+  setupBlankThreehourSlots(){ // hacky: find which 3 hour periods have passed today, so we can put a spacer in the grid of forecasts such that days form horizontal rows
+    const currentDate = new Date();
+    const currentHour = currentDate.getHours();
+    let emptySlotsToday = parseInt((currentHour / 3), 10) + 1;
+    const blankSpacerStyle = {width: emptySlotsToday * 12.5+'%'};
+    return (<li style={blankSpacerStyle}></li>);
+  }
+
   constructor(props){
       super(props);
       this.state = {
@@ -38,6 +46,7 @@ class Weather extends Component {
     });
     return (
       <ul className="App-forecast">
+        {this.setupBlankThreehourSlots()}
         {weatherDaily}
         {/*forecast data: {this.state.data}*/}
       </ul>
