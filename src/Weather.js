@@ -37,12 +37,14 @@ class Weather extends Component {
   render() {
     let weatherDaily = this.weatherList.slice(0, config.forecastTotalDays*8).map((dayNum, index) => {
       const windDirectionPointerStyle = {display: 'inline-block', transform: 'rotate(' + dayNum.wind.deg + 'deg)'};
-      return <li key={index}>
+      return (
+        <li key={index}>
           <div className="date">{dayNum.dt_txt.substring(5, 16)}</div>
           <div className="description">{dayNum.weather[0].description}</div>
           <div className="temp">{Math.round(dayNum.main.temp - 273.15)}&deg;C</div>
           <div className="wind">Wind: {Math.round(dayNum.wind.speed)}m/sec  <span style={windDirectionPointerStyle}>&uarr;</span></div>
-        </li>;
+        </li>
+      );
     });
     return (
       <ul className="App-forecast">
