@@ -42,7 +42,7 @@ class Weather extends Component {
           <div className="date">{dayNum.dt_txt.substring(5, 16)}</div>
           <div className="description">{dayNum.weather[0].description}</div>
           <div className="temp">{Math.round(dayNum.main.temp - 273.15)}&deg;C</div>
-          <div className="wind">Wind: {Math.round(dayNum.wind.speed)}m/sec  <span style={windDirectionPointerStyle}>&uarr;</span></div>
+          <div className="wind">Wind: {Math.round(dayNum.wind.speed)}m/sec  <span style={windDirectionPointerStyle}>&darr;</span></div>
         </li>
       );
     });
